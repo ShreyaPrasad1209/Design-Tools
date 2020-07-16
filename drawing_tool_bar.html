@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="drawing_tool_bar.css">
+    <title>Drawing Tool Bar</title>
+</head>
+<body>
+<div id="toolbar">
+    <div id="tools">
+    <img src="./images/Design tools/Website Process - Amazon Shapes-46.svg" onclick="myFunction()" alt="" srcset="" data-drawer-trigger aria-controls="drawer-name" aria-expanded="false">
+
+    <img src="./images/Design tools/Website Process - Amazon Shapes-51.svg" alt="" srcset="" style="width: 1.5rem;
+    height: 3rem;" data-drawer-trigger aria-controls="drawer-name" aria-expanded="false">
+    </div>
+    <div id="grabarea">
+        Click Here!
+    </div>
+
+    <div id="pencils" style="display: none;">
+        <img src="./images/Design tools/Website Process - Amazon Shapes-49.svg" alt="" aria="hidden">
+        <img src="./images/Design tools/Website Process - Amazon Shapes-50.svg" alt="">
+        <img src="./images/Design tools/Website Process - Amazon Shapes-48.svg" alt="">
+        <img src="./images/Design tools/Website Process - Amazon Shapes-47.svg" alt="">
+    </div>
+</div>
+<script>
+    function myFunction() {
+        var x = document.getElementById("pencils");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      </script>
+<script src="drawing_tool_bar.js"></script>   
+
+</body>
+</html>
