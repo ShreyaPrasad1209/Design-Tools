@@ -3,11 +3,9 @@ dragElement(document.getElementById("toolbar"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-   console.log("Grab not reached yet")
   if (document.getElementById("grabarea")) {
     // if present, the header is where you move the DIV from:
     document.getElementById("grabarea").onmousedown = dragMouseDown;
-    console.log("Grab reached");
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
     elmnt.onmousedown = dragMouseDown;
@@ -19,6 +17,7 @@ function dragElement(elmnt) {
     // get the mouse cursor position at startup:
     pos3 = e.clientX;
     pos4 = e.clientY;
+
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
@@ -58,7 +57,6 @@ class DrawingToolbar {
         undo=true,
         redo=true,
         stamp=false,
-        clear=true,
         preview=true
     )
   {
@@ -76,8 +74,8 @@ class DrawingToolbar {
          this.clear=clear;
          this.preview=preview;   
  		// set all of the default parameters
- 		currentDrawerOpen = ‘’; // default to all closed
- 		currentDrawingTool = ‘p1’; // smallest pencil tool
+ 		currentDrawerOpen = "none"; // default to all closed
+ 		currentDrawingTool = p1; // smallest pencil tool
  		mirrorMode = false; // initial set mirror to false
  		stampMode = false;  // initial set stamp mode to false
 		
@@ -106,78 +104,29 @@ setStampMode(stampModeStatus) {
  	// clicking on a pencil/eraser tool will turn off stamp mode
  }
 
-toggleDrawerStatus(drawer_name ) {
+toggleDrawerStatus(tools, tool_name, divenclosingtool) {
+
+  var pencils = document.getElementById("pencils");
+  var mainpencil=document.getElementById("mainpencil")
+  var p1=document.getElementById("p1");
+  // drawer feature
+  if (pencils.style.display === "none") 
+  {
+    console.log("myFunction reached!")
+    pencils.style.display = "block";
+    mainpencil.style.transform="rotate(220deg)";
+    p1.style.backgroundColor="#bedde9";
+    this.setStampMode=false;
+  } 
+  else
+  {
+    pencils.style.display = "none";
+    mainpencil.style.transform="none";
+    p1.style.backgroundColor="white";
+    this.setStampMode=true;
+  }
      // will need logic in here:
-    
-    var settings = {
-      speedOpen: 50,
-      speedClose: 350,
-      activeClass: 'is-active',
-      visibleClass: 'is-visible',
-      selectorTarget: '[data-drawer-target]',
-      selectorTrigger: '[data-drawer-trigger]',
-      selectorClose: '[data-drawer-close]',
-
-    };
-
-
-    //                                 
-    // Methods
-    //
-
-    // Toggle accessibility
-    var toggleAccessibility = (drawer_name)=> {
-      if (drawer_name.getAttribute('aria-expanded') === 'true') {
-        drawer_name.setAttribute('aria-expanded', false);
-      } else {
-        drawer_name.setAttribute('aria-expanded', true);
-      }   
-    };
-                                    
-    // Open Drawer
-    var openDrawer = (trigger)=> {
-                                         
-      // Find target
-      var target = document.getElementById(trigger.getAttribute('aria-controls'));
-
-      // Make it active
-      target.classList.add(settings.activeClass);
-
-      // Make body overflow hidden so it's not scrollable
-      document.documentElement.style.overflow = 'hidden';
-
-      // Toggle accessibility
-      toggleAccessibility(trigger);
-
-      // Make it visible
-      setTimeout(function () {
-        target.classList.add(settings.visibleClass);
-      }, settings.speedOpen); 
-                               
-    };
-
-    // Close Drawer
-    var closeDrawer = function (event) {
-
-      // Find target
-      var closestParent = event.closest(settings.selectorTarget),
-        childrenTrigger = document.querySelector('[aria-controls="' + closestParent.id + '"');
-
-      // Make it not visible
-      closestParent.classList.remove(settings.visibleClass);
-
-      // Remove body overflow hidden
-       document.documentElement.style.overflow = '';
-
-      // Toggle accessibility
-      toggleAccessibility(childrenTrigger);
-
-      // Make it not active
-      setTimeout(function () {    
-        closestParent.classList.remove(settings.activeClass);
-      }, settings.speedClose);             
-
-    };
+                                  
       	/* -----------------------------------------------
  		If pencil clicked, open or close drawer and ensure stamp mode is off
  		If eraser clicked, open or close drawer and ensure stamp mode is off

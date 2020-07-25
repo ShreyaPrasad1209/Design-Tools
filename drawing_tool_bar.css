@@ -1,23 +1,26 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
 #toolbar
 {
-    height: 250px;
+    height: 340px;
     width: 125px;
     border:3px solid #f2d9aa;
     display: flex;
     justify-content: space-between;
     position: absolute;
+    top: 0;  
+    right: 0;
 }
 
 #grabarea
 {
     background-color:  #dfeef4;
     width: 50%;
-    height: 250px;
+    height: 340px;
     cursor: move;
 }
 
@@ -29,4 +32,81 @@
 #tools
 {
     margin: 0.5rem;
+    cursor: pointer;
+}
+
+#pencils
+{
+    margin-bottom: 10rem;
+    height: fit-content;
+    width: 173px;
+    position: absolute;
+    top: 8px;
+    left: -161px;
+    background-color: #bedde9;
+    cursor: pointer;
+    border-radius: 8px 8px 0px 8px; 
+}
+
+#pencils img:hover
+{
+    margin-bottom: 1rem;
+}
+
+#p1
+{
+    padding-right: 13px;
+    border-radius: 0px 8px 8px 0px;
+}
+
+#erasers
+{
+    margin-bottom: 10rem;
+    height: fit-content;
+    width: 216px;
+    position: absolute;
+    top: 67px;
+    left: -197px;
+    background-color: #bedde9;
+    cursor: pointer;
+    border-radius: 8px 8px;
+}
+
+
+#eraser1
+{
+    padding-right: 13px;
+    border-radius: 0px 8px 8px 8px;
+    margin-top: 7px;
+}
+
+#rotate1 
+{
+    width: 2.5rem;
+    height: 3rem;
+    transform: none;
+    margin-top: 7px;
+}
+
+#rotate
+{
+    margin-bottom: 10rem;
+    height: fit-content;
+    width: 216px;
+    position: absolute;
+    top: 122px;
+    left: -162px;
+    background-color: #bedde9;
+    cursor: pointer;
+    border-radius: 8px 8px;
+}
+
+#stamp
+{
+    margin-top: 7px;
+}
+
+#eye
+{
+    margin-top: 7px;
 }

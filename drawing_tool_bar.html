@@ -7,32 +7,93 @@
     <title>Drawing Tool Bar</title>
 </head>
 <body>
+
 <div id="toolbar">
-    <div id="tools">
-    <img src="./images/Design tools/Website Process - Amazon Shapes-46.svg" onclick="myFunction()" alt="" srcset="" data-drawer-trigger aria-controls="drawer-name" aria-expanded="false">
-
-    <img src="./images/Design tools/Website Process - Amazon Shapes-51.svg" alt="" srcset="" style="width: 1.5rem;
-    height: 3rem;" data-drawer-trigger aria-controls="drawer-name" aria-expanded="false">
-    </div>
-    <div id="grabarea">
-        Click Here!
-    </div>
-
+     <!-- Array of pencils -->
     <div id="pencils" style="display: none;">
-        <img src="./images/Design tools/Website Process - Amazon Shapes-49.svg" alt="" aria="hidden">
-        <img src="./images/Design tools/Website Process - Amazon Shapes-50.svg" alt="">
-        <img src="./images/Design tools/Website Process - Amazon Shapes-48.svg" alt="">
-        <img src="./images/Design tools/Website Process - Amazon Shapes-47.svg" alt="">
-    </div>
+      <img src="./images/Design tools/Website Process - Amazon Shapes-46.svg" alt="">
+      <img src="./images/Design tools/Website Process - Amazon Shapes-47.svg" alt="">
+      <img src="./images/Design tools/Website Process - Amazon Shapes-48.svg" alt="">
+      <img src="./images/Design tools/Website Process - Amazon Shapes-49.svg" alt="">
+      <img src="./images/Design tools/Website Process - Amazon Shapes-50.svg" alt="">
+  </div>
+
+    <!-- Array of erasers -->
+   <div id="erasers" style="display: none;">
+    <img src="./images/Design tools/Website Process - Amazon Shapes-51.svg" alt="">
+     <img src="./images/Design tools/Website Process - Amazon Shapes-53.svg" alt="">
+     <img src="./images/Design tools/Website Process - Amazon Shapes-54.svg" alt="">
+     <img src="./images/Design tools/Website Process - Amazon Shapes-55.svg" alt="">
+     <img src="./images/Design tools/Website Process - Amazon Shapes-56.svg" alt="">
+ </div>
+
+ <!-- Array of rotate symbols -->
+ <div id="rotate" style="display: none;">
+  <img src="./images/Design tools/Website Process - Amazon Shapes-37.svg" alt="">
+   <img src="./images/Design tools/Website Process - Amazon Shapes-36.svg" alt=""> 
 </div>
+
+  <!-- Tools -->
+    <div id="tools">
+
+      <!-- Pencil -->
+      <div id="p1">
+    <img src="./images/Design tools/Website Process - Amazon Shapes-46.svg" onclick="myFunction('p1', 'mainpencil', 'pencils')" alt="" srcset="" id="mainpencil">
+      </div>
+
+      <!-- Eraser -->
+    <div id="eraser1">
+    <img src="./images/Design tools/Website Process - Amazon Shapes-53.svg" style="width: 1.5rem; height: 3rem;" onclick="myFunction('eraser1', 'maineraser', 'erasers')" id="maineraser">
+    </div>
+    
+    <!-- Rotate image -->
+    <div id="rotate1">
+      <img src="./images/Design tools/Website Process - Amazon Shapes-34.svg" 
+       onclick="myFunction('rotate1', 'mainrotate', 'rotate')" id="mainrotate" style="margin-left: 0;">
+      </div>
+    <div id="stamp">
+      <img src="./images/Design tools/Website Process - Amazon Shapes-40.svg" style="margin-left: 0;">
+    </div>
+
+    <div id="eye">
+      <img src="./images/Design tools/Website Process - Amazon Shapes-39.svg" style="margin-left: 0; width: 54px;">
+    </div>
+
+    
+    <div id="cleardesign">
+      <img src="./images/Design tools/Website Process - Amazon Shapes-41.svg" style="margin-left: 0; width: 54px;">
+    </div>
+      
+   </div>
+
+   <!-- Grab area starts! -->
+    <div id="grabarea">
+        Grab from here!
+    </div>
+
+</div>
+
+
 <script>
-    function myFunction() {
-        var x = document.getElementById("pencils");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
+    function myFunction(toolBackground, toolId,toolArrays) {
+        var toolArrays = document.getElementById(toolArrays);
+        var toolId= document.getElementById(toolId)
+        var toolBackground =document.getElementById(toolBackground);
+        // drawer feature
+        if (toolArrays.style.display === "none") 
+        {
+          console.log("Style display detected")
+          toolArrays.style.display = "block";
+          toolId.style.transform="rotate(220deg)";
+          toolBackground.style.backgroundColor="#bedde9";
+        } 
+        else
+        {
+          toolArrays.style.display = "none";
+          toolId.style.transform="none";
+          toolBackground.style.backgroundColor="white";
         }
+
       }
       </script>
 <script src="drawing_tool_bar.js"></script>   
