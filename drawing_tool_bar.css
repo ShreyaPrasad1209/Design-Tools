@@ -22,17 +22,30 @@
     width: 50%;
     height: 340px;
     cursor: move;
+    margin-top: -3px;
+    margin-left: -13px;
+    border:3px solid #f2d9aa;
+}
+
+#grabarea h2
+{   
+    transform: rotate(90deg);
+    margin-top: 102px;
+    width: 372%;
+    margin-left: -67px;
 }
 
 #toolbar img{
     height: 3rem;
     margin-left: 1rem;
+    
 }
 
 #tools
 {
     margin: 0.5rem;
     cursor: pointer;
+    width: 100%;
 }
 
 #pencils
@@ -50,13 +63,14 @@
 
 #pencils img:hover
 {
-    margin-bottom: 1rem;
+   height: ;
 }
 
 #p1
 {
     padding-right: 13px;
     border-radius: 0px 8px 8px 0px;
+    margin-right: 15px;     
 }
 
 #erasers
@@ -78,6 +92,7 @@
     padding-right: 13px;
     border-radius: 0px 8px 8px 8px;
     margin-top: 7px;
+    margin-right: 10px;
 }
 
 #rotate1 
@@ -109,4 +124,29 @@
 #eye
 {
     margin-top: 7px;
+}
+
+#stamps
+{
+    margin-bottom: 10rem;
+    height: fit-content;
+    width: 272px;
+    position: absolute;
+    top: 180px;
+    left: -283px;
+    background-color: #bedde9;
+    cursor: pointer;
+    border-radius: 8px 8px 0px 8px;
+}
+
+#selectimage
+{
+    border: 2px solid;
+    display: -webkit-inline-box;
+    width: 96%;
+}
+
+#info
+{
+    height: 2rem !important;
 }
