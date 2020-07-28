@@ -51,19 +51,20 @@
 #pencils
 {
     margin-bottom: 10rem;
-    height: fit-content;
-    width: 173px;
+    height: 52px;
+    width: 200px;
     position: absolute;
     top: 8px;
     left: -161px;
     background-color: #bedde9;
     cursor: pointer;
     border-radius: 8px 8px 0px 8px; 
+    overflow-y: visible;
 }
 
 #pencils img:hover
 {
-   height: ;
+    margin-bottom: 1rem;
 }
 
 #p1

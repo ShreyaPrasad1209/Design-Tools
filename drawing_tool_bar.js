@@ -106,9 +106,9 @@ setStampMode(stampModeStatus) {
 
 toggleDrawerStatus(tools, tool_name, divenclosingtool) {
 
-  var pencils = document.getElementById("pencils");
-  var mainpencil=document.getElementById("mainpencil")
-  var p1=document.getElementById("p1");
+  var pencils = document.getElementById("tools");
+  var mainpencil=document.getElementById("tool-name")
+  var p1=document.getElementById("divenclosingtool");
   // drawer feature
   if (pencils.style.display === "none") 
   {
