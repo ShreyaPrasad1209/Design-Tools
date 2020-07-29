@@ -61,8 +61,8 @@ class DrawingToolbar {
     )
   {
 		// set all of the default and set parameters
- 		 this.initialTopPx = initialTopPx;
- 		 this.initialRightPx = initialRIghtPx;
+ 		     this.initialTopPx = initialTopPx;
+ 		     this.initialRightPx = initialRIghtPx;
          this.pencil = pencil;
          this.eraser=eraser;
          this.mirror=mirror;
@@ -112,7 +112,7 @@ toggleDrawerStatus(tools, tool_name, divenclosingtool) {
   // drawer feature
   if (pencils.style.display === "none") 
   {
-    console.log("myFunction reached!")
+    console.log("drawerFunction reached!")
     pencils.style.display = "block";
     mainpencil.style.transform="rotate(220deg)";
     p1.style.backgroundColor="#bedde9";
@@ -146,7 +146,7 @@ toggleDrawerStatus(tools, tool_name, divenclosingtool) {
  }
 
  getStampMode(stampModeStatus) {
-// Etc...
+
 
 
 
