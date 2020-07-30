@@ -56,12 +56,12 @@
     position: absolute;
     top: 8px;
     left: -188px;
-    background-color: #bedde9;
+    /* background-color: #bedde9; */
     cursor: pointer;
     border-radius: 8px 8px 0px 8px; 
 }
 
-#pencils img
+/* #pencils img
 {
     transition: 0.1s ease;
 }
@@ -72,7 +72,7 @@
     -ms-transform: scale(1.3);
     transform: scale(1.3);
     transition: 0.1s ease;
-}
+} */
 
 #p1
 {
@@ -84,7 +84,7 @@
 #erasers
 {
     margin-bottom: 10rem;
-    height: fit-content;
+    height: 52px;
     width: 230px;
     position: absolute;
     top: 67px;
@@ -95,7 +95,7 @@
 }
 
 
-#erasers img
+/* #erasers img
 {
     transition: 0.1s ease;
 }
@@ -106,7 +106,7 @@
     -ms-transform: scale(1.3);
     transform: scale(1.3);
     transition: 0.1s ease;
-}
+} */
 
 
 #eraser1
@@ -128,7 +128,7 @@
 #rotate
 {
     margin-bottom: 10rem;
-    height: fit-content;
+    height: 52px;
     width: 216px;
     position: absolute;
     top: 122px;
@@ -137,7 +137,7 @@
     cursor: pointer;
     border-radius: 8px 8px;
 }
-
+/* 
 #rotate img
 {
     transition: 0.1s ease;
@@ -149,7 +149,7 @@
     -ms-transform: scale(1.3);
     transform: scale(1.3);
     transition: 0.1s ease;
-}
+} */
 
 #stamp
 {
@@ -165,23 +165,109 @@
 {
     margin-bottom: 10rem;
     height: fit-content;
-    width: 272px;
+    width: 345px;
     position: absolute;
     top: 180px;
     left: -283px;
-    background-color: #bedde9;
     cursor: pointer;
     border-radius: 8px 8px 0px 8px;
+   
 }
 
-#selectimage
+#stampheading
 {
+    height: 3rem;
+    width: 100%;
+    border-radius: 8px 8px 8px 8px;
     border: 2px solid;
+}
+
+#outerdiv
+{
+    background-color: darkolivegreen;
+    width: 78%;
+    border-radius: 8px 8px 8px 8px;
+    overflow-y: scroll;
+    height: 25rem;
+}
+
+#selectstamp
+{   
     display: -webkit-inline-box;
-    width: 96%;
+    width: 87%;
+    background-color: darkorange;
+    margin-left: 17px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px 8px 8px 8px;
 }
 
 #info
 {
     height: 2rem !important;
+    margin-top: 3px;
+}
+
+#demostamps1
+{
+    margin-top: 3rem;
+    margin-left: -200.5px;
+    height: fit-content;
+}
+
+#demostamps1 img
+{
+    border: 2px solid;
+}
+
+#demostamps2
+{
+    margin-top: 9rem;
+    padding-left: -13px;
+    margin-left: -12.2rem;
+    height: fit-content;
+}
+#stampimages
+{
+    margin-left: 3rem;
+    width: 63%;
+}
+
+
+.tool_icon {
+    float:left;
+    background-image: url('pencil_test.png');
+    background-position: center 20px;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 15px;
+    border: 0px solid #ddd;
+    transition-duration: 0.5s;
+    margin: 0px 11px;
+}
+
+.tool_icon:hover {
+    background-position: center 0px;
+}
+
+.tool_active {
+    background-position: center 0px;
+}
+
+.drawer_background {
+    position: absolute;
+    width: 204px;
+    height: 53px;
+    bottom: 10px;
+    left: 0px;
+    background-color: #bedde9;
+    border-radius: 8px;
+    bottom: 20px;
+    top: 0px;
+}
+
+.tool_layer {
+    position:absolute;
+    z-index: 100;
+    
 }
