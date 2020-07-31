@@ -179,7 +179,7 @@
     height: 3rem;
     width: 100%;
     border-radius: 8px 8px 8px 8px;
-    border: 2px solid;
+    border: 2px solid #f2d9aa;
 }
 
 #outerdiv
@@ -270,4 +270,21 @@
     position:absolute;
     z-index: 100;
     
+}
+
+#outerdiv::-webkit-scrollbar {
+    width: 12px;
+	background-color: #F5F5F5;
+}
+ 
+#outerdiv::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+ 
+#outerdiv::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: blue;
 }

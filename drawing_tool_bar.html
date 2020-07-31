@@ -13,20 +13,23 @@
     <div id="pencils" style="display: none;">
       <div class="tool_layer">
         <div class="tool_icon" id="p_1" onclick="stayUpwards('tool_icon')"
-        style="background-image: url('./images/Design tools/Website Process - Amazon Shapes-51.svg');" 
-        >
+        style="background-image: url('./images/Website\ Process\ -\ Amazon\ Shapes-47.svg');">
           
         </div>
-        <div class="tool_icon" id="p_2">
+        <div class="tool_icon" id="p_2" onclick="stayUpwards('tool_icon')"
+        style="background-image: url('./images/Website\ Process\ -\ Amazon\ Shapes-48.svg');">
           
         </div>
-        <div class="tool_icon" id="p_3">
+        <div class="tool_icon" id="p_3" onclick="stayUpwards('tool_icon')"
+        style="background-image: url('./images/Website\ Process\ -\ Amazon\ Shapes-49.svg');">
           
         </div>
-        <div class="tool_icon" id="p_4">
+        <div class="tool_icon" id="p_4" onclick="stayUpwards('tool_icon')"
+        style="background-image: url('./images/Website\ Process\ -\ Amazon\ Shapes-49.svg');">
           
         </div>
-        <div class="tool_icon" id="p_5">
+        <div class="tool_icon" id="p_5" onclick="stayUpwards('tool_icon')"
+        style="background-image: url('./images/Website\ Process\ -\ Amazon\ Shapes-49.svg');">
           
         </div>
         <div class="clear:both;"></div>
@@ -38,7 +41,7 @@
    <div id="erasers" style="display: none;">
     <div class="tool_layer">
       <div class="tool_icon" id="p_1" onclick="stayUpwards('tool_icon')"
-        style="background-image: url('./images/Design tools/Website Process - Amazon Shapes-51.svg');"></div>
+        style="background-image: url('./images/Website Process - Amazon Shapes-51.svg');"></div>
          
         <div class="tool_icon" id="p_2"></div>
         <div class="tool_icon" id="p_3"></div>
@@ -51,7 +54,7 @@
  <div id="rotate" style="display: none;">
   <div class="tool_layer">
     <div class="tool_icon" id="p_1" onclick="stayUpwards('tool_icon')"
-      style="background-image: url('./images/Design tools/Website Process - Amazon Shapes-51.svg');"></div>
+      style="background-image: url('./images/Website Process - Amazon Shapes-51.svg');"></div>
        
       <div class="tool_icon" id="p_2"></div>
       <div class="tool_icon" id="p_3"></div>
@@ -66,7 +69,7 @@
   <div id="outerdiv">
   <div id="selectstamp">
    <h2>1. Select image</h2>
-   <img src="./images/Design tools/Website Process - Amazon Shapes-31.svg" id="info">
+   <img src="./images/Website Process - Amazon Shapes-31.svg" id="info">
    <div id="demostamps1">
    <img src="./Stamps/Stamps-60.png" alt="">
    <img src="./Stamps/Stamps-61.png" alt="">
@@ -103,32 +106,32 @@
 
       <!-- Pencil -->
       <div id="p1">
-    <img src="./images/Design tools/Website Process - Amazon Shapes-46.svg" onclick="drawerFunction('p1', 'mainpencil', 'pencils')" alt="" srcset="" id="mainpencil">
+    <img src="./images/Website Process - Amazon Shapes-46.svg" onclick="drawerFunction('p1', 'mainpencil', 'pencils')" alt="" srcset="" id="mainpencil">
       </div>
 
       <!-- Eraser -->
     <div id="eraser1">
-    <img src="./images/Design tools/Website Process - Amazon Shapes-53.svg" style="width: 1.5rem; height: 3rem;" onclick="drawerFunction('eraser1', 'maineraser', 'erasers')" id="maineraser">
+    <img src="./images/Website Process - Amazon Shapes-53.svg" style="width: 1.5rem; height: 3rem;" onclick="drawerFunction('eraser1', 'maineraser', 'erasers')" id="maineraser">
     </div>
     
     <!-- Rotate image -->
     <div id="rotate1">
-      <img src="./images/Design tools/Website Process - Amazon Shapes-34.svg" 
+      <img src="./images/Website Process - Amazon Shapes-34.svg" 
        onclick="drawerFunction('rotate1', 'mainrotate', 'rotate')" id="mainrotate" style="margin-left: 0;">
       </div>
       <!-- Stamp -->
     <div id="stamp">
-      <img src="./images/Design tools/Website Process - Amazon Shapes-40.svg" id="mainstamp" style="margin-left: 0;"
+      <img src="./images/Website Process - Amazon Shapes-40.svg" id="mainstamp" style="margin-left: 0;"
       onclick="drawerFunction('stamp','mainstamp' ,'stamps')">
     </div>
     <!-- Eye -->
     <div id="eye">
-      <img src="./images/Design tools/Website Process - Amazon Shapes-39.svg" style="margin-left: 0; width: 54px;">
+      <img src="./images/Website Process - Amazon Shapes-39.svg" style="margin-left: 0; width: 54px;">
     </div>
 
     <!-- Clear Design -->
     <div id="cleardesign">
-      <img src="./images/Design tools/Website Process - Amazon Shapes-41.svg" style="margin-left: 0; width: 54px;">
+      <img src="./images/Website Process - Amazon Shapes-41.svg" style="margin-left: 0; width: 54px;">
     </div>
       
    </div>
@@ -163,7 +166,6 @@ console.log("calling the drawerFunction function. ('" + toolArrays + "'): " + to
 console.log("Found Stamps and it is OFF so turn it ON: Currently=" + toolElement.style.display);
 
         toolElement.style.display = "block";
-        toolBackground.style.backgroundColor="#bedde9";
 
 console.log(toolArrays + " is currently=" + toolElement.style.display);
       }
