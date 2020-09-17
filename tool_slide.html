@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="drawing_tool_bar.css">
+    <title>Drawing Tool Bar</title>
+	
+	<style>
+		.drawer {
+			width: 350px;
+			position: relative;
+			height: 70px;
+			margin: 50px auto;
+		}
+		
+		
+		.tool_icon {
+			float:left;
+			background-image: url('pencil_test.png');
+			background-position: center 20px;
+			background-repeat: no-repeat;
+			height: 50px;
+			width: 15px;
+			border: 0px solid #ddd;
+			transition-duration: 0.5s;
+			margin: 0px 15px;
+		}
+		
+		.tool_icon:hover {
+			background-position: center 0px;
+		}
+		
+		.tool_active {
+			background-position: center 0px;
+		}
+		
+		.drawer_background {
+			position: absolute;
+			width: 350px;
+			height: 35px;
+			bottom: 10px;
+			left: 0px;
+			background-color: #75cbee;
+			border-radius: 8px;
+			bottom: 20px;
+		}
+		
+		.tool_layer {
+			position:absolute;
+			z-index: 100;
+			
+		}
+		
+	</style>
+
+</head>
+<body>
+
+	<div class="drawer">
+		<div class="tool_layer">
+			<div class="tool_icon" id="p_1">
+				
+			</div>
+			<div class="tool_icon tool_active" id="p_2">
+				
+			</div>
+			<div class="tool_icon" id="p_3">
+				
+			</div>
+			<div class="tool_icon" id="p_4">
+				
+			</div>
+			<div class="tool_icon" id="p_5">
+				
+			</div>
+			<div class="clear:both;"></div>
+		</div>
+		<div class="drawer_background"></div>
+	</div>
+
+</body>
+
+</html>
